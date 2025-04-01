@@ -39,4 +39,7 @@ This means that applications are free to define their own window decorations and
 Though, as a rule of thumb, applications should, for user experience reasons,
 use the default window decorations provided by HyperShell.
 
+An Application developer will simply need to set the HSDK.Application.decorated property to true
+in order to use the default window decorations.
+
 (See the AboutApplication component for an example of a standard window implementation.)

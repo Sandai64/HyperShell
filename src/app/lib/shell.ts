@@ -59,7 +59,6 @@ export class Hypershell
   // Get the current z-index counter
   getZIndex() : number
   {
-    console.log('Hypershell::getZIndex()');
     return this.zIndexCounter;
   }
 

@@ -6,8 +6,8 @@
 
       <div class="flex items-center gap-2">
         @for (app of hypershell.getAppsList(); track $index) {
-          <div (click)="hypershell.createWindow(app)" class="flex items-center justify-center transition-all bg-white rounded cursor-pointer size-6 hover:rounded-lg hover:bg-opacity-75" [title]="app">
-            <p class="font-mono text-xs leading-none text-black w-max">{{ app | slice: 0:1 | uppercase }}{{ app | slice: -1 }}</p>
+          <div (click)="hypershell.createWindow(app)" class="flex items-center justify-center transition-all bg-white rounded cursor-pointer h-6 w-max px-2 hover:rounded-lg hover:bg-opacity-75" [title]="app">
+            <p class="font-mono text-xs leading-none text-black w-max">{{ app }}</p>
           </div>
         }
       </div>

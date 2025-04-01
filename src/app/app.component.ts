@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent
 {
-  constructor(public readonly shell: Hypershell) {}
+  // Expose for template
+  Object = Object;
 
+  constructor(public readonly shell: Hypershell) {}
 }
