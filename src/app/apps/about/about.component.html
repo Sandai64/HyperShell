@@ -1,0 +1,13 @@
+<app-window [body]="windowBody" windowTitle="Debug Information" [disableMaximize]="true"/>
+<ng-template #windowBody>
+  <div class="p-4 min-w-96">
+    <div class="flex justify-between mx-auto max-w-72">
+      <p class="font-designer">HyperShell</p>
+      <p>Debug Information</p>
+    </div>
+    <hr class="my-2 border-zinc-200/65">
+
+    <p>{{ appComponent.shell.getZIndex() }}</p>
+
+  </div>
+</ng-template>

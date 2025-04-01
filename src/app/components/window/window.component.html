@@ -1,0 +1,22 @@
+@if (decorated) {
+  <!-- decoration -->
+  <div class="flex items-center w-full h-8 px-2 resize window-header window-header-identifier">
+    <div class="flex items-center justify-between w-full window-header-identifier">
+      <span class="drop-shadow-md window-header-identifier min-w-fit">{{ windowTitle }}</span>
+      <div class="flex items-center gap-2 font-mono leading-none">
+        <lucide-icon size="18" title="Minimiser" class="transition-all rounded-full window-header-identifier hover:bg-zinc-500/50" name="chevron-down" />
+        @if ( !disableMaximize ) {
+          <lucide-icon size="18" title="Maximiser" class="transition-all rounded-full window-header-identifier hover:bg-green-500/50" name="chevron-up"/>
+        }
+        <lucide-icon size="18" title="Fermer" class="transition-all rounded-full window-header-identifier hover:bg-red-500/50" name="x" />
+      </div>
+    </div>
+  </div>
+}
+
+<!-- content -->
+<div class="window-body">
+  @if (body) {
+    <ng-container *ngTemplateOutlet="body"></ng-container>
+  }
+</div>

@@ -1,0 +1,76 @@
+#taskbar {
+  backdrop-filter: blur(10px);
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.eos-launcher-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.eos-launcher-icon:hover {
+  opacity: 70%;
+}
+
+/* App standard window */
+app-window .window-header {
+  border-left: 1px solid rgba(255, 255, 255, 0.45);
+  border-right: 1px solid rgba(255, 255, 255, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  background-color: black;
+  color: white;
+}
+
+app-window .window-header > p.title {
+  backdrop-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+}
+
+app-window .window-body {
+  overflow: hidden;
+
+  backdrop-filter: blur(12px);
+  background-color: rgb(255 255 255 / 0.45);
+
+  color: black;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.45);
+  border-right: 1px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  height: calc(100% - 32px);
+}
+
+app-window {
+  filter: drop-shadow(2px 4px 6px black);
+  backdrop-filter: blur(12px);
+  border-radius: 8px !important;
+}
+
+app-window.resizable {
+  overflow: auto;
+  resize: both !important;
+}
+
+/* Change mouse cursor only when #windowheader is clicked, the mouse reverts back to what it was before when un-clicked */
+app-window .window-header:focus {
+  cursor: grab;
+}

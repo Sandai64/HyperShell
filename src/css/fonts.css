@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Designer';
+  src: url('../assets/fonts/designer.woff2');
+}
+
+.font-designer {
+  font-family: 'Designer', sans-serif;
+}

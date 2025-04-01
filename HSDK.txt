@@ -1,0 +1,42 @@
+The HyperShell Development Kit (HSDK)
+=====================================
+
+HSDK provides a set of interfaces and classes that allow developers
+to create applications for HyperShell.
+
+(HSDK is part of my master's thesis on Software Architecture.)
+
+Provided classes & interfaces
+=============================
+
+HSDK classes and interfaces are located in the HSDK namespace to avoid conflicts.
+Here is a rough list of the main classes and interfaces provided by HSDK :
+  - HSDK.Application : the main interface for applications.
+    \_ Provides the basic properties and methods of an application.
+       Such as :
+         - name : the name of the application in the window's title bar.
+         - isResizable  : (initialization property) self-explanatory.
+         - isFullscreen : (initialization property) self-explanatory.
+         - isMaximized  : (initialization property) self-explanatory.
+         - isMinimized  : (initialization property) self-explanatory.
+    \_ Note : An application containing a window will implement this interface.
+
+  - HSDK.AppMetadata : the main interface for applications metadata.
+    \_ Provides the basic properties and methods of an application metadata.
+       Such as :
+         - name : the name of the application in the window's title bar.
+         - icon : the icon of the application in the taskbar.
+         - description : a short description of the application.
+         - version : the version of the application.
+         - author  : the author of the application.
+         - license : the license of the application.
+
+Styling
+=======
+
+HyperShell and HSDK do not enforce window decorations by default.
+This means that applications are free to define their own window decorations and styles.
+Though, as a rule of thumb, applications should, for user experience reasons,
+use the default window decorations provided by HyperShell.
+
+(See the AboutApplication component for an example of a standard window implementation.)

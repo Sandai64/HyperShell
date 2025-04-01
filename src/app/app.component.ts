@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { WindowComponent } from './components/window/window.component';
+import { Hypershell } from './lib/shell';
+import { TaskbarComponent } from './components/taskbar/taskbar.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [WindowComponent, TaskbarComponent, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'eclipseos';
+export class AppComponent
+{
+  constructor(public readonly shell: Hypershell) {}
+
 }

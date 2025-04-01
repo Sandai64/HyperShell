@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "eclipseos": {
+    "hypershell": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/eclipseos",
+            "outputPath": "dist/hypershell",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -25,7 +25,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/css/master.css",
+              "src/css/shell.css",
+              "src/css/tailwind.css",
+              "src/css/fonts.css"
             ],
             "scripts": []
           },
@@ -57,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "eclipseos:build:production"
+              "buildTarget": "hypershell:build:production"
             },
             "development": {
-              "buildTarget": "eclipseos:build:development"
+              "buildTarget": "hypershell:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "eclipseos:build"
+            "buildTarget": "hypershell:build"
           }
         },
         "test": {
@@ -84,7 +87,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/css/master.css",
+              "src/css/shell.css",
+              "src/css/tailwind.css",
+              "src/css/fonts.css"
             ],
             "scripts": []
           }

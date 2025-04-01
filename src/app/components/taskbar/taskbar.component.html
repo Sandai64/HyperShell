@@ -1,0 +1,21 @@
+<!-- taskbar -->
+<div class="flex items-center justify-between w-full h-12 px-4 text-white bg-black/50" id="taskbar">
+  <div class="flex items-center">
+    <div class="flex items-center gap-5">
+      <lucide-icon name="layout-grid"/>
+
+      <div class="flex items-center gap-2">
+        @for (app of hypershell.getAppsList(); track $index) {
+          <div (click)="hypershell.createWindow(app)" class="flex items-center justify-center transition-all bg-white rounded cursor-pointer size-6 hover:rounded-lg hover:bg-opacity-75" [title]="app">
+            <p class="font-mono text-xs leading-none text-black w-max">{{ app | slice: 0:1 | uppercase }}{{ app | slice: -1 }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="leading-tight text-center">
+    <p class="text-sm">{{ date | date: 'HH:mm:ss' }}</p>
+    <p class="text-xs text-neutral-500">{{ date | date: 'dd/MM/YYYY' }}</p>
+  </div>
+</div>
